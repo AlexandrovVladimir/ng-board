@@ -1,0 +1,15 @@
+<div class="ticket" [ngClass]="{
+  'ticket--priority-high': ticket.priority === 'High',
+  'ticket--priority-medium': ticket.priority === 'Medium',
+  'ticket--priority-low': ticket.priority === 'Low'}">
+  <h2 class="ticket__name">{{ ticket.title }}</h2>
+  <div class="ticket__description">
+    <ng-container *ngIf="ticket.description; else descriptionTpl">
+      <div>{{ ticket.description }}</div>
+    </ng-container>
+    <ng-template #descriptionTpl>
+      <div><i><ins>No description...</ins></i></div>
+    </ng-template>
+  </div>
+  <div class="ticket__id">{{ 'ID-' + ticket.id }}</div>
+</div>

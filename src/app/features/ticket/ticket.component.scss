@@ -1,0 +1,52 @@
+.ticket {
+  border: 1px solid rgba(0,0,0,0.75);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+
+  &::after {
+    border: 2px;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+  }
+
+  &--priority-high {
+    &::after {
+      background-color: #FF1E00FF;
+    }
+  }
+
+  &--priority-medium {
+    &::after {
+      background-color: #FF8800FF;
+    }
+  }
+
+  &--priority-low {
+    &::after {
+      background-color: #808080B0;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    min-height: 20px;
+
+    div {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__id {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+}

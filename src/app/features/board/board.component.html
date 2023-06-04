@@ -1,0 +1,10 @@
+<div class="board">
+  <app-column *ngFor="let column of columns$ | async">
+    <ng-container header>
+      <app-column-header>{{ column.name }}</app-column-header>
+    </ng-container>
+    <ng-container content *ngIf="tickets$ | async as tickets">
+      <app-column-content [columnName]="column.name" [ticketsList]="tickets"></app-column-content>
+    </ng-container>
+  </app-column>
+</div>

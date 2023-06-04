@@ -1,0 +1,11 @@
+:host {
+  height: 100%;
+  width: 100%;
+
+  .board {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 10px;
+  }
+}
