@@ -2,8 +2,8 @@ import { inject, Injectable } from '@angular/core';
 
 import { BehaviorSubject, map, Observable } from 'rxjs';
 
-import { Column, Ticket } from '../interfaces';
 import { BoardStateService } from './board.state.service';
+import { Column, Ticket } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
